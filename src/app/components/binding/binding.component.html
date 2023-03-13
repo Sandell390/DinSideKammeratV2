@@ -1,0 +1,20 @@
+<p>binding works!</p>
+
+<div style="display: flex;">
+    <div style="display: flex; flex-direction: column; width: 30%; background-color: aqua; margin-right: 50px;">
+        <p>Variable from TypeScript</p>
+        <img [src]="imageURL" />
+    </div>
+
+    <div style="display: flex; flex-direction: column; width: 30%; background-color: yellow; margin-right: 50px;">
+        <p>User definded URL</p>
+        <input #input type="text" (change)="changeURL(input.value)">
+        <img [src]="imageURL2" />
+    </div>
+
+    <div style="display: flex; flex-direction: column; width: 30%; background-color: green; margin-right: 50px;">
+        <p>User definded URL V2 (Two way binding)</p>
+        <input #input type="text" [(ngModel)]="imageURL3">
+        <img [src]="imageURL3" />
+    </div>
+</div>
